@@ -6,7 +6,7 @@ const initialState = {
                "fight", "ghoat", "hello", "label", "labor"]],
       ["medium", ["purple", "family", "twelve", "silver", "thirty", 
                  "donate", "people", "banana", "future", "office"]],
-      ["difficulty", ["abandon", "babysat", "between", "example", "journey", 
+      ["hard", ["abandon", "babysat", "between", "example", "journey", 
                      "license", "elegant", "acquire", "address", "quickly"]],
   ]),
 };
