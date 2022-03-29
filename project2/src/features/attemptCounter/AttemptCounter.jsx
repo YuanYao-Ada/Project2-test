@@ -2,12 +2,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   decrement,
   selectCount,
-} from './reducerSlice.jsx';
+} from './attemptSlice.jsx';
+import {
+  selectDifficulty,
+} from './difficultySlice.jsx';
 import { useState } from 'react';
 import WordChecker from './WordChecker.jsx';
+import { selectLength } from './wordLengthSlice.jsx';
+import { selectAnswer } from './wordSlice.jsx';
 
 export function AttemptCounter() {
   const count = useSelector(selectCount);
+  const difficulty = useSelector(selectDifficulty);
+  const wordLength = useSelector(selectLength);
+  const answer = useSelector(selectAnswer);
   const dispatch = useDispatch();
   const [word, setWord] = useState("");
   // Control when the guess result will show.
@@ -31,7 +39,11 @@ export function AttemptCounter() {
     setWord(event.target.value);
   }
 
-  if (count > 0) {
+  if (count === undefined) {
+    return (<div>
+      Please select a difficulty level to start the game
+    </div>)
+  } else if (count > 0) {
     return (
       <div>
         <div>
@@ -43,14 +55,17 @@ export function AttemptCounter() {
               You have {count} attempt(s) left
           </div>
           <WordChecker guess={word} ifShow={bool} changeShow={setBool} />
+          <div>difficulty: {difficulty}</div>
+          <div>wordLength: {wordLength}</div>
+          <div>selectedWord: {answer}</div>
         </div>
       </div>
     );
-  } else {
+  }
+
+  if (count == 0) {
     return (
       <div> Sorry, you lose. No more chances.</div>
     )
   }
-
-  
 }
