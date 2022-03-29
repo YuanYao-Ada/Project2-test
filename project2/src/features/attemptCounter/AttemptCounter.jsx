@@ -25,7 +25,7 @@ export function AttemptCounter() {
   const handleSubmit = event => {
       event.preventDefault();
       // Just a hard code. Will need functions to check what's the correct input length
-      if (word.length === 5) {
+      if (word.length === answer.length) {
         dispatch(decrement());
       }
       // Empty the input box

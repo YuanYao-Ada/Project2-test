@@ -59,18 +59,15 @@ function WordChecker(props) {
         
     }
 
-
     if (!ifShow) {
         return (
             <div></div>
         )
     } else {
-        
-
-        if (guess.length !== 5) {
+        if (guess.length !== answer.length) {
             return (
                 <div>
-                    The length should be five
+                    The length should be {answer.length}
                 </div>
             )
         
