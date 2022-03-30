@@ -1,14 +1,13 @@
 import React from 'react';
-import { AttemptCounter } from './features/attemptCounter/AttemptCounter';
-// import './App.css';
-import DifficultySelector from './features/attemptCounter/DifficultySelector';
+import Wordle from './features/wordle/Wordle';
+import DifficultySelector from './features/difficultyHandler/DifficultySelector';
 
 function App() {
   return (
     <div>
       <header>
         <DifficultySelector />
-        <AttemptCounter />
+        <Wordle />
       </header>
     </div>
   );

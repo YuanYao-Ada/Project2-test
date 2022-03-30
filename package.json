@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-individual-character-input-boxes": "^1.1.0",
     "react-select": "^5.2.2"
   }
 }
