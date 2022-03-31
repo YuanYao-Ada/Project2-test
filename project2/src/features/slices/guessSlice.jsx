@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: "whate",
+  value: undefined,
 };
 
 export const guessSlice = createSlice({

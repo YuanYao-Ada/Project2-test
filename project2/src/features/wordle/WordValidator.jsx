@@ -6,7 +6,7 @@ import { selectGuess } from "../slices/guessSlice";
 export default function WordValidator(props) {
     const guess = useSelector(selectGuess);
     const answer = useSelector(selectAnswer);
-    if (guess && guess.length !== answer.length) {
+    if (guess !== undefined && guess.length !== answer.length) {
         return (
             <div> The length of the word should be {answer.length}</div>
         )

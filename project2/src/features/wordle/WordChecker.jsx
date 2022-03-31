@@ -4,12 +4,6 @@ import styles from "./style.module.css"
 import { selectAnswer } from "../slices/wordSlice";
 import { selectHistoryAttempt } from "../slices/historyAttemptSlice";
 
-//
-// TODO:
-// 1. Game rule page 
-// 3. reset game
-// 4. difficulty set in url
-
 function WordChecker() {
     let history = useSelector(selectHistoryAttempt);
     const answer = useSelector(selectAnswer);

@@ -34,7 +34,7 @@ export default function SubmitBox() {
       <div>
           <form onSubmit={handleSubmit}>
               <input onChange={getInput} placeholder='Guess the word!' disabled={disabled}></input>
-              <button type="submit">Submit</button>
+              <button type="submit" disabled={disabled}>Submit</button>
           </form>
           <WordValidator callback={setDisabled}/>
       </div>)}
