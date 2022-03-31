@@ -11,6 +11,7 @@ export default function SubmitBox() {
   const answer = useSelector(selectAnswer);
   const dispatch = useDispatch();
   const [word, setWord] = useState("");
+  const [cong, setCong] = useState(false);
  
   const handleSubmit = event => {
       event.preventDefault();
@@ -28,13 +29,13 @@ export default function SubmitBox() {
       setWord(event.target.value);
   }
 
-  const [disabled, setDisabled] = useState(false);
+  const content = "Guess the word in length " + answer.length;
 
   return (
       <div>
+          <WordValidator callback={setCong} />
           <form onSubmit={handleSubmit}>
-              <input onChange={getInput} placeholder='Guess the word!' disabled={disabled}></input>
-              <button type="submit" disabled={disabled}>Submit</button>
+              <input onChange={getInput} placeholder={content} disabled={cong}></input>
+              <button type="submit" disabled={cong}>Submit</button>
           </form>
-          <WordValidator callback={setDisabled}/>
       </div>)}

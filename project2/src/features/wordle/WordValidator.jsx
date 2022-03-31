@@ -13,7 +13,7 @@ export default function WordValidator(props) {
     } else if (guess === answer) {
         props.callback(true);
         return (
-            <div>Cong!</div>
+            <div>Congratulations! Would you like to try again?</div>
         )
     } else {
         return (

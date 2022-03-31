@@ -16,7 +16,7 @@ function App() {
           <Route path='/GameRule'>
             <GameRule />
           </Route>
-          <Route path='/'>
+          <Route path='/Game'>
             <DifficultySelector />
           </Route>
         </Switch>
