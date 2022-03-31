@@ -10,6 +10,11 @@ function App() {
       <div>
       This will be a future float nav bar :) :) :)
         <Switch>
+          <Route exact path='/'>
+            <Link to="/game">
+              <DifficultySelector />
+            </Link>
+          </Route>
           <Route path='/Game'>
             <DifficultySelector />
             <Wordle />
