@@ -68,12 +68,13 @@ export default function Wordle() {
   reset();
   
   if (count === undefined) {
-    return (<div>
+    return (
+    <div className='game-title'> 
       Please select a difficulty level to start the game
     </div>)
   } else if (count > 0) {
     return (
-      <div>
+      <div className='input-box'>
         <div>
           <SubmitBox />
           <div style={{color:"red"}}>
@@ -81,7 +82,7 @@ export default function Wordle() {
           </div>
           <WordChecker />
           <div>answer: {answer}</div>
-          <button onClick={() => {window.location.reload();}}>Reset</button>
+          <button className='reset' onClick={() => {window.location.reload();}}>Reset</button>
         </div>
       </div>
     );
@@ -89,10 +90,10 @@ export default function Wordle() {
 
   if (count === 0) {
     return (
-      <div>
-        <div> Sorry, you lose. No more chances.</div>
+      <div className='input-box'>
+        <div > Sorry, you lose. No more chances.</div>
         <div> The correct answer is {answer} </div>
-        <button onClick={() => {window.location.reload();}}>Reset</button>
+        <button className='reset' onClick={() => {window.location.reload();}}>Reset</button>
       </div>
     )
   }
