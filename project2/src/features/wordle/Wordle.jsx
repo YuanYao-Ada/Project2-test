@@ -91,7 +91,7 @@ export default function Wordle() {
   if (count === 0) {
     return (
       <div className='input-box'>
-        <div > Sorry, you lose. No more chances.</div>
+        <div> Sorry, you lose. No more chances.</div>
         <div> The correct answer is {answer} </div>
         <button className='reset' onClick={() => {window.location.reload();}}>Reset</button>
       </div>
